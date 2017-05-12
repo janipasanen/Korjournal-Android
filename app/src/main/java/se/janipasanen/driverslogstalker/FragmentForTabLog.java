@@ -21,40 +21,16 @@
 package se.janipasanen.driverslogstalker;
 
 
-import android.content.Intent;
 import android.location.Criteria;
-import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.view.*;
 import android.widget.EditText;
 import android.support.v4.app.Fragment;
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.ActionBar.Tab;
-import android.app.ActionBar.TabListener;
-import android.app.FragmentTransaction;
-import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -73,11 +49,28 @@ public class FragmentForTabLog extends Fragment {
     protected Criteria criteria;
     protected Context context;
     
-    // Find the TextViews
+    // Find the TextViews; intitialisera textLat och textLong som TextView (Måste göras för att
+    // de skall kunna visas på log fliken.
     //TextView textLat, textLong;
 
-    String textLat;
-    String textLong;
+
+    // Datatyp för lagring av data för gps koordinat för senare inmatning till db.
+    private String textLat;
+    private String textLong;
+
+
+    public void setLatLong(String textLat, String textLong) {
+        this.textLat = textLat;
+        this.textLong = textLong;
+    }
+
+    public String getLat() {
+        return textLat;
+    }
+
+    public String getLong() {
+        return textLong;
+    }
     
     
     // Find the EditText
@@ -109,8 +102,10 @@ public class FragmentForTabLog extends Fragment {
 		criteria = new Criteria();
 		criteria.setAccuracy(Criteria.ACCURACY_LOW);
 		
-		LocationListener ll = new mylocationlistener();
+		LocationListener ll = new MyLocationListener();
 		lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 60000, 300, ll);
+
+
 		
 	
 		// Initialise the EditTexts
@@ -162,19 +157,26 @@ public class FragmentForTabLog extends Fragment {
 				        // Get the values from the EditTexts
 				    //  String latitude=textLat.getText().toString();
 					//	String longitude=textLong.getText().toString();
-                        String latitude=textLat;
-                    	String longitude=textLong;
+                    //    String latitude=textLat;
+                    //	String longitude=textLong;
 
 						String odometer=edit_startodometer.getText().toString();
 						String purposeoftrip=edit_purposeoftrip.getText().toString();
 						
-						String fromaddress = "NOTHING";
-						String toaddress = "NOTHING";
+					//	String fromaddress = "NOTHING";
+					//	String toaddress = "NOTHING";
 						
 
 			        
-						long id = driversLogDatabaseAdapter.insertStartLoggingData(latitude, longitude, odometer, purposeoftrip, fromaddress, toaddress);
-						
+					//	long id = driversLogDatabaseAdapter.insertStartLoggingData(latitude, longitude, odometer, purposeoftrip, fromaddress, toaddress);
+                    if (textLat != null && textLong != null) {
+                        long id = driversLogDatabaseAdapter.insertStartLoggingData(textLat, textLong, odometer, purposeoftrip);
+                    }
+                    else
+                    {
+
+                    }
+
 //						if (id<0) {
 //							ToastMessage.toastmessage(getActivity(), "Unsuccesful");
 //						} else {
@@ -202,21 +204,25 @@ public class FragmentForTabLog extends Fragment {
 				        // Get the values from the EditTexts
 						//String tolatitude=textLat.getText().toString();
 						//String tolongitude=textLong.getText().toString();
-                        String tolatitude=textLat;
-                        String tolongitude=textLong;
+                        //String tolatitude
+                          //      tolatitude=textLat;
+                        //String tolongitude=textLong;
 
 						String odometer2=edit_arriveodometer.getText().toString();
-						
-						int count = driversLogDatabaseAdapter.insertUpdateStopLoggingData(tolatitude, tolongitude, odometer2);
-						
-						if (count==0) {
-							ToastMessage.toastmessage(getActivity(), "Unsuccesful");
-						} else if (count>1){
-							ToastMessage.toastmessage(getActivity(), "Unsuccesful, updated more then one row");
-						} else {
-							ToastMessage.toastmessage(getActivity(), "Trip succesfully logged");
-						}
-			        
+
+
+					    if (textLat != null && textLong != null) {
+                            int count = driversLogDatabaseAdapter.insertUpdateStopLoggingData(textLat, textLong, odometer2);
+
+
+                            if (count==0) {
+                                ToastMessage.toastmessage(getActivity(), "Unsuccesful");
+                            } else if (count>1){
+                                ToastMessage.toastmessage(getActivity(), "Unsuccesful, updated more then one row");
+                            } else {
+                                ToastMessage.toastmessage(getActivity(), "Trip succesfully logged");
+                            }
+                        }
 			}
 		    			
 			/**
@@ -232,51 +238,14 @@ public class FragmentForTabLog extends Fragment {
 	}
 	
 	
-	class mylocationlistener implements LocationListener {
 
-		@Override
-		public void onLocationChanged(Location location) {
-			// get Lat. and Long. from the service
-			if(location != null) {
-				double pLat = location.getLatitude();
-				double pLong = location.getLongitude();
 
-                textLat = Double.toString(pLat);
-                textLong = Double.toString(pLong);
-
-			//	textLat.setText(Double.toString(pLat));
-			//	textLong.setText(Double.toString(pLong));
-			}
-		}
-
-		@Override
-		public void onStatusChanged(String provider, int status,
-				Bundle extras) {
-			// TODO Auto-generated method stub
-				
-			
-		}
-
-		@Override
-		public void onProviderEnabled(String provider) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void onProviderDisabled(String provider) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-		
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-	
-		
+
+
 		return inflater.inflate(R.layout.fragment_for_tab_log, container, false);
 	}
 

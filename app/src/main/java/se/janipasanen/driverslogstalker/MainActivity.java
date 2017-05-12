@@ -19,8 +19,10 @@ package se.janipasanen.driverslogstalker;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
@@ -46,6 +48,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 
+
 	public class MainActivity extends FragmentActivity implements TabListener  {
 		public final static String EXTRA_MESSAGE = "se.janipasanen.driverslogstalker.MESSAGE";
 	
@@ -56,7 +59,11 @@ import android.widget.ToggleButton;
 		ActionBar actionBar;
 		Context context;
 
-		
+
+
+
+
+
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
@@ -143,9 +150,13 @@ import android.widget.ToggleButton;
 			
 			actionBar.addTab(tabLog);
 			actionBar.addTab(tabReport);
-		}			
-			
-			
+
+
+
+
+
+		}
+
 	
 	
 		
@@ -261,10 +272,12 @@ import android.widget.ToggleButton;
 //			Log.d("Jani", "onTabReselected at " + " position " + tab.getPosition() + " name " + tab.getText());
 		}
 
-	   
+
+
+
 	}
 	
-	
+
 	
 	
 	class MyAdapter extends FragmentPagerAdapter {

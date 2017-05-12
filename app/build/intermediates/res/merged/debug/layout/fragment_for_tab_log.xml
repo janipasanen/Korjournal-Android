@@ -20,20 +20,24 @@
     android:orientation="vertical"
     tools:context="se.janipasanen.driverslogstalker.FragmentForTabLog" >
 
+<!--
    	<TextView 
    	    android:id="@+id/edit_lat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:text="@string/edit_startlat"/>
+        android:text="@string/edit_startlat"
+		android:visibility="invisible"/>
 
    	<TextView
    	    android:id="@+id/textLat"
    	    android:layout_width="wrap_content"
    	    android:layout_height="wrap_content"
    	    android:text=""
-   	    android:textAppearance="?android:attr/textAppearanceLarge" />
+   	    android:textAppearance="?android:attr/textAppearanceLarge"
+		android:visibility="invisible" />
+
 
     <TextView 
    	    android:id="@+id/edit_long"
@@ -41,15 +45,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:text="@string/edit_startlong"/>
+        android:text="@string/edit_startlong"
+		android:visibility="invisible" />
+
+
 
     <TextView
         android:id="@+id/textLong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    
+        android:textAppearance="?android:attr/textAppearanceLarge"
+		android:visibility="invisible" />
+
+-->
+
     <TextView 
    	    android:id="@+id/edit_startodometer"
         android:layout_width="wrap_content"

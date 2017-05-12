@@ -13,11 +13,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class DriversLogStalkerTester  extends ActivityInstrumentationTestCase2<MainActivity> {
+public class DriversLogStalkerInstrumentedTests extends ActivityInstrumentationTestCase2<MainActivity> {
 
-	public DriversLogStalkerTester() {
+
+	public DriversLogStalkerInstrumentedTests() {
 		super(MainActivity.class);
 		// TODO Auto-generated constructor stub
+
+
 	}
+
 
 }

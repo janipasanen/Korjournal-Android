@@ -21,15 +21,13 @@ public class DriversLogDatabaseAdapter  {
 	}
 	
 	
-	public long insertStartLoggingData (String latitude, String longitude, String odometer, String purposeoftrip, String fromaddress, String toaddress) {
+	public long insertStartLoggingData (String latitude, String longitude, String odometer, String purposeoftrip) {
 		
 		
 		SQLiteDatabase db = helper.getWritableDatabase();
 		ContentValues contentValues=new ContentValues();
 		contentValues.put(DriversLogHelper.COLUMN_FROMLAT, latitude);
 		contentValues.put(DriversLogHelper.COLUMN_FROMLONG, longitude);
-		contentValues.put(DriversLogHelper.COLUMN_FROMADDRESS, fromaddress);
-		contentValues.put(DriversLogHelper.COLUMN_TOADDRESS, toaddress);
 		contentValues.put(DriversLogHelper.COLUMN_STARTODOMETER, odometer);
 		contentValues.put(DriversLogHelper.COLUMN_PURPOSEOFTRIP, purposeoftrip);
 			
@@ -40,6 +38,7 @@ public class DriversLogDatabaseAdapter  {
 		
 	}
 	
+//	public int insertUpdateStopLoggingData (String tolatitude, String tolongitude, String odometer2) {
 	public int insertUpdateStopLoggingData (String tolatitude, String tolongitude, String odometer2) {
 		
 		// Update driverslogstalkerdb.driverslog where _id =(SELECT max(_id) FROM driverslog
