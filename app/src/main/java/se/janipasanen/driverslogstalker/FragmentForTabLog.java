@@ -74,7 +74,10 @@ public class FragmentForTabLog extends Fragment {
     protected Context context;
     
     // Find the TextViews
-    TextView textLat, textLong;
+    //TextView textLat, textLong;
+
+    String textLat;
+    String textLong;
     
     
     // Find the EditText
@@ -91,8 +94,14 @@ public class FragmentForTabLog extends Fragment {
 		
 		
 		// Initialise the TextViews
-		textLat = (TextView) getActivity().findViewById(R.id.textLat);
-		textLong = (TextView) getActivity().findViewById(R.id.textLong);
+		//textLat = (TextView) getActivity().findViewById(R.id.textLat);
+		//textLong = (TextView) getActivity().findViewById(R.id.textLong);
+
+
+
+		// Do not show lat & long text fields on scree
+		//textLat.setVisibility(View.GONE);
+		//textLong.setVisibility(View.GONE);
 		
 		
 		// Create an object for the LocationManager to get Lat. and Long.
@@ -151,8 +160,11 @@ public class FragmentForTabLog extends Fragment {
 //			        ToastMessage.toastmessage(getActivity(), "Start logging pressed");
 			        
 				        // Get the values from the EditTexts
-				        String latitude=textLat.getText().toString();
-						String longitude=textLong.getText().toString();
+				    //  String latitude=textLat.getText().toString();
+					//	String longitude=textLong.getText().toString();
+                        String latitude=textLat;
+                    	String longitude=textLong;
+
 						String odometer=edit_startodometer.getText().toString();
 						String purposeoftrip=edit_purposeoftrip.getText().toString();
 						
@@ -188,8 +200,11 @@ public class FragmentForTabLog extends Fragment {
 
 			        
 				        // Get the values from the EditTexts
-						String tolatitude=textLat.getText().toString();
-						String tolongitude=textLong.getText().toString();
+						//String tolatitude=textLat.getText().toString();
+						//String tolongitude=textLong.getText().toString();
+                        String tolatitude=textLat;
+                        String tolongitude=textLong;
+
 						String odometer2=edit_arriveodometer.getText().toString();
 						
 						int count = driversLogDatabaseAdapter.insertUpdateStopLoggingData(tolatitude, tolongitude, odometer2);
@@ -225,9 +240,12 @@ public class FragmentForTabLog extends Fragment {
 			if(location != null) {
 				double pLat = location.getLatitude();
 				double pLong = location.getLongitude();
-				
-				textLat.setText(Double.toString(pLat));
-				textLong.setText(Double.toString(pLong));
+
+                textLat = Double.toString(pLat);
+                textLong = Double.toString(pLong);
+
+			//	textLat.setText(Double.toString(pLat));
+			//	textLong.setText(Double.toString(pLong));
 			}
 		}
 
