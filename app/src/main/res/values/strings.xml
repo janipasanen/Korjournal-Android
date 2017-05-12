@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Drivers Log Stalker</string>
+   
+    <string name="hello_world">Hello world</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_display_message">My Message</string>
+    
+    <string name="button_ToggleLogging"></string>
+	
+    <string name="action_settings">Settings</string>
+    <string name="action_new">New log</string>
+    <string name="action_search">View report</string>
+     
+	<string name="edit_startlat">Latitude</string>
+	<string name="edit_startlong">Longitude</string>
+	<string name="edit_startodometer">Odometer at start</string>
+	<string name="edit_arriveodometer">Odometer at arrival</string>
+	<string name="edit_purposeoftrip">Purpose</string>
+	
+	<string name="edit_startlatValue">Enter latitude</string>
+	<string name="edit_startlongValue">Enter longintude</string>
+	<string name="edit_startodometerValue">Enter this value when you start</string>
+	<string name="edit_arriveodometerValue">Enter this value when you arrive</string>
+	
+	
+	
+	<string name="edit_purposeoftripValue">Enter the purpose of the trip</string>
+	
+	<string name="button_ViewAllData">View all data</string>   
+    
+    
+    
+</resources>

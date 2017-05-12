@@ -1,0 +1,109 @@
+<!--
+  Copyright 2014 Jani Pasanen
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+      http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="se.janipasanen.driverslogstalker.FragmentForTabLog" >
+
+   	<TextView 
+   	    android:id="@+id/edit_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/edit_startlat"/>
+
+   	<TextView
+   	    android:id="@+id/textLat"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:text=""
+   	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView 
+   	    android:id="@+id/edit_long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/edit_startlong"/>
+
+    <TextView
+        android:id="@+id/textLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView 
+   	    android:id="@+id/edit_startodometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/edit_startodometer"/>
+   
+     <EditText
+        android:id="@+id/edit_startodometerValue"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_startodometerValue" />
+     
+     <TextView 
+   	    android:id="@+id/edit_arriveodometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/edit_arriveodometer"/>
+   
+     <EditText
+        android:id="@+id/edit_arriveodometerValue"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_arriveodometerValue" />
+     
+     <TextView 
+   	    android:id="@+id/edit_purposeoftrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/edit_purposeoftrip"/>
+   
+     <EditText
+        android:id="@+id/edit_purposeoftripValue"
+        android:inputType="textAutoCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_purposeoftripValue" />
+
+
+    <ToggleButton
+        android:id="@+id/toggleLoggingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/button_ToggleLogging"
+        android:textOff="Start logging"
+        android:textOn="Stop logging"        />
+
+</LinearLayout>
