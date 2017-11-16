@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/jani/StudioProjects/DriversLogStalker/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f21be2ee3efb3c920dbb067dd8a5bcc446433da3">
+        <dex dex="/home/jani/StudioProjects/DriversLogStalker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e9fad9ec6d37d8a4cdd4c4e251d5ed096a16d7df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jani/StudioProjects/DriversLogStalker/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/home/jani/StudioProjects/DriversLogStalker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8f68366309c4fc578c3341e67f7423a247d55968/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jani/.android/build-cache/852cb0d134941ee4a55b7ce5d98886a35f0f21f9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef">
+        <dex dex="/home/jani/StudioProjects/DriversLogStalker/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c3522deabd25c1eae85873c922225b99c686d3b5/classes.dex" />
+    </item>
+
+</items>
