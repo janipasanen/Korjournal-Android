@@ -1,6 +1,14 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [com.android.support:appcompat-v7:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-21.0.0.aar/e8bb532644dc45e3f2a7cb799b94dda9/AndroidManifest.xml:14:4-17:12
+MERGED from [com.android.support:support-v4:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.0.aar/9b6b1487db3710a541802cddb4812128/AndroidManifest.xml:14:4-17:12
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:3:5-47
 		INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml
@@ -9,16 +17,22 @@ ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManif
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:5:5-30
 		INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml
 		INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:4:5-28
 		INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml
 		INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:20.0.0] /home/jani/.android/build-cache/852cb0d134941ee4a55b7ce5d98886a35f0f21f9/output/AndroidManifest.xml:16:5-42
-MERGED from [com.android.support:support-v4:20.0.0] /home/jani/.android/build-cache/dab3a9316b8ce25a96f93a54414486b8449580a5/output/AndroidManifest.xml:16:5-42
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-21.0.0.aar/e8bb532644dc45e3f2a7cb799b94dda9/AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:appcompat-v7:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-21.0.0.aar/e8bb532644dc45e3f2a7cb799b94dda9/AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:support-v4:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.0.aar/9b6b1487db3710a541802cddb4812128/AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:support-v4:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.0.aar/9b6b1487db3710a541802cddb4812128/AndroidManifest.xml:15:5-42
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml
@@ -33,14 +47,16 @@ ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManif
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:10:22-76
 application
 ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:12:5-26:19
-MERGED from [com.android.support:appcompat-v7:20.0.0] /home/jani/.android/build-cache/852cb0d134941ee4a55b7ce5d98886a35f0f21f9/output/AndroidManifest.xml:17:5-19
-MERGED from [com.android.support:support-v4:20.0.0] /home/jani/.android/build-cache/dab3a9316b8ce25a96f93a54414486b8449580a5/output/AndroidManifest.xml:17:5-19
+MERGED from [com.android.support:appcompat-v7:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-21.0.0.aar/e8bb532644dc45e3f2a7cb799b94dda9/AndroidManifest.xml:16:5-19
+MERGED from [com.android.support:appcompat-v7:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/appcompat-v7-21.0.0.aar/e8bb532644dc45e3f2a7cb799b94dda9/AndroidManifest.xml:16:5-19
+MERGED from [com.android.support:support-v4:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.0.aar/9b6b1487db3710a541802cddb4812128/AndroidManifest.xml:16:5-19
+MERGED from [com.android.support:support-v4:21.0.0] /home/jani/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.0.aar/9b6b1487db3710a541802cddb4812128/AndroidManifest.xml:16:5-19
 	android:label
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:15:9-41
-	android:allowBackup
-		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:13:9-35
 	android:icon
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:14:9-45
+	android:allowBackup
+		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
 		ADDED from /home/jani/StudioProjects/DriversLogStalker/app/src/main/AndroidManifest.xml:16:9-40
 activity#se.janipasanen.driverslogstalker.MainActivity
